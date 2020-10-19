@@ -4,7 +4,7 @@ echo "2. Insert a Job"
 echo "3. Edit a Job"
 echo "4. Remove a Job"
 echo "5. Remove all Jobs"
-echo "9. Exit
+echo "9. Exit"
 
 while true; do
 	read -r input
