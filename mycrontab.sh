@@ -110,6 +110,8 @@ case $Selection in
 4* )	echo "Option 4 selected";;
 
 5* )	echo "Option 5 selected";;
+	crontab -ir
+	printf "\n"
 
 9* )	exit 0;;
 
