@@ -109,9 +109,10 @@ case $Selection in
 
 4* )	echo "Option 4 selected";;
 
-5* )	echo "Option 5 selected";;
+5* )	echo "Option 5 selected"
+	echo "This will delete all pre-existing cron jobs, press 'y' to confirm"
 	crontab -ir
-	printf "\n"
+	printf "\n";;
 
 9* )	exit 0;;
 
