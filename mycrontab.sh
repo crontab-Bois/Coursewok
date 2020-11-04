@@ -25,17 +25,23 @@ case $Selection in
 
 2* )	echo "Option 2 selected"
 	echo "When would you like your job to run?"
-	echo "Choose a day of the week (0-7) (Sunday = 0 or 7):"
+	echo "Choose a day of the week (0-7) (Sunday = 0 or 7)"
+	echo "Enter an '*' if you would like all options selected:"
 	while :; do
 		read -r DofW
 		printf "\n"
+		
+		#this line checks if an asterisk is entered.
+		if echo x"$DofW" | grep '*' > /dev/null; then
+			break
+		else
 
-		#this line uses regex to check that a number is entered and asks for a number-
-		#if an invalid character is entered.
-		#the "^" makes sure that the input begins with a number
-		#the "+" allows for multiple numbers to be entered
-		#the "$" checks that there is nothing entered after the number
-		[[ $DofW =~ ^[0-9]+$ ]] || { echo "Please enter a number:"; continue; }
+			#this line uses regex to check that a number is entered and asks for a number if an invalid character is entered.
+			#the "^" makes sure that the input begins with a number
+			#the "+" allows for multiple numbers to be entered
+			#the "$" checks that there is nothing entered after the number
+			[[ $DofW =~ ^[0-9]+$ ]] || { echo "Please enter a number:"; continue; }
+		fi
 
 		#this line checks if the entered number is between 0 and 7 (inclusive) and prints an error message if not.
 		if ((DofW >= 0 && DofW <= 7)); then
@@ -46,16 +52,22 @@ case $Selection in
 	done
 	
 	echo "Choose a month (1-12)"
+	echo "Enter an '*' if you would like all options selected:"
 	while :; do
 		read -r Month
 		printf "\n"
 
-		#this line uses regex to check that a number is entered and asks for a number-
-		#if an invalid character is entered.
-		#the "^" makes sure that the input begins with a number
-		#the "+" allows for multiple numbers to be entered
-		#the "$" checks that there is nothing entered after the number
-		[[ $Month =~ ^[0-9]+$ ]] || { echo "Please enter a number:"; continue; }
+		#this line checks if an asterisk is entered.
+		if echo x"$DofW" | grep '*' > /dev/null; then
+			break
+		else
+
+			#this line uses regex to check that a number is entered and asks for a number if an invalid character is entered.
+			#the "^" makes sure that the input begins with a number
+			#the "+" allows for multiple numbers to be entered
+			#the "$" checks that there is nothing entered after the number
+			[[ $Month =~ ^[0-9]+$ ]] || { echo "Please enter a number:"; continue; }
+		fi
 
 		#this line checks if the entered number is between 1 and 12 (inclusive) and prints an error message if not.
 		if ((Month >= 1 && Month <= 12)); then
@@ -66,16 +78,22 @@ case $Selection in
 	done
 
 	echo "Choose a day of the month (1-31):"
+	echo "Enter an '*' if you would like to select all options:"
 	while :; do
 		read -r DofM
 		printf "\n"
 
-		#this line uses regex to check that a number is entered and asks for a number-
-		#if an invalid character is entered.
-		#the "^" makes sure that the input begins with a number
-		#the "+" allows for multiple numbers to be entered
-		#the "$" checks that there is nothing entered after the number
-		[[ $DofM =~ ^[0-9]+$ ]] || { echo "Please enter a number:"; continue; }
+		#this line checks if an asterisk is entered.
+		if echo x"$DofW" | grep '*' > /dev/null; then
+			break
+		else
+
+			#this line uses regex to check that a number is entered and asks for a number if an invalid character is entered.
+			#the "^" makes sure that the input begins with a number
+			#the "+" allows for multiple numbers to be entered
+			#the "$" checks that there is nothing entered after the number
+			[[ $DofM =~ ^[0-9]+$ ]] || { echo "Please enter a number:"; continue; }
+		fi
 
 		#this line checks if the entered number is between 1 and 31 (inclusive) and prints an error message if not.
 		if ((DofM >= 1 && DofM <= 31)); then
@@ -86,16 +104,22 @@ case $Selection in
 	done
 
 	echo "Choose an hour of the day (0-23):"
+	echo "Enter an '*' if you would like to select all options:"
 	while :; do
 		read -r Hour
 		printf "\n"
 
-		#this line uses regex to check that a number is entered and asks for a number-
-		#if an invalid character is entered.
-		#the "^" makes sure that the input begins with a number
-		#the "+" allows for multiple numbers to be entered
-		#the "$" checks that there is nothing entered after the number
-		[[ $Hour =~ ^[0-9]+$ ]] || { echo "Please enter a number:"; continue; }
+		#this line checks if an asterisk is entered.
+		if echo x"$DofW" | grep '*' > /dev/null; then
+			break
+		else
+
+			#this line uses regex to check that a number is entered and asks for a number if an invalid character is entered.
+			#the "^" makes sure that the input begins with a number
+			#the "+" allows for multiple numbers to be entered
+			#the "$" checks that there is nothing entered after the number
+			[[ $Hour =~ ^[0-9]+$ ]] || { echo "Please enter a number:"; continue; }
+		fi
 
 		#this line checks if the entered number is between 0 and 23 (inclusive) and prints an error message if not.
 		if ((Hour >= 0 && Hour <= 23)); then
@@ -106,16 +130,22 @@ case $Selection in
 	done
 
 	echo "Choose a minute of the Hour (0-59:)"
+	echo "Enter an '*' if you would like to select all options:"
 	while :; do
 		read -r Minute
 		printf "\n"
 
-		#this line uses regex to check that a number is entered and asks for a number-
-		#if an invalid character is entered.
-		#the "^" makes sure that the input begins with a number
-		#the "+" allows for multiple numbers to be entered
-		#the "$" checks that there is nothing entered after the number
-		[[ $Minute =~ ^[0-9]+$ ]] || { echo "Please enter a number:"; continue; }
+		#this line checks if an asterisk is entered.
+		if echo x"$DofW" | grep '*' > /dev/null; then
+			break
+		else
+
+			#this line uses regex to check that a number is entered and asks for a number if an invalid character is entered.
+			#the "^" makes sure that the input begins with a number
+			#the "+" allows for multiple numbers to be entered
+			#the "$" checks that there is nothing entered after the number
+			[[ $Minute =~ ^[0-9]+$ ]] || { echo "Please enter a number:"; continue; }
+		fi
 
 		#this line checks if the entered number is between 0 and 59 (inclusive) and prints an error message if not.
 		if ((Minute >= 0 && Minute <= 59)); then
