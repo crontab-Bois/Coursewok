@@ -99,7 +99,9 @@ case $Selection in
 
 	Location=`pwd`
 
-	crontab -l > tempcron
+	#when a cron job is created while no other jobs are active an error message will
+   	#be returned '2>/dev/null' removes the message to avoid confusion.
+	crontab -l > tempcron 2>/dev/null
 	echo "$Minute $Hour $DofM $Month $DofW $Location/job-scripts/$Script" >> tempcron
 	crontab tempcron
 	rm tempcron
