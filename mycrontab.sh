@@ -93,7 +93,7 @@ case $Selection in
 		fi
 	done
 
-	echo "Please type the name of the script you would like to run. Make sure that the script is saved in your job-scripts folder. For example ./job-scrpits/test1.sh you would type test1.sh"
+	echo "Please type the name of the script you would like to run. Make sure that the script is saved in your job-scripts folder. For example ./job-scripts/test1.sh you would type test1.sh"
 	read -r Script
 	printf "\n"
 
@@ -109,11 +109,17 @@ case $Selection in
 
 3* )	echo "Option 3 selected";;
 
-4* )	echo "Option 4 selected";;
+4* )	echo "Option 4 selected"
+	echo "Please enter the name of the job you would like to remove, this will be the same as the name of the script. For example ./job-scripts/test1.sh you would type test1.sh"
+	read -r Job
+	crontab -l | grep -v $Job | crontab -
+	echo " Job successfully removed."
+	printf "\n";;
 
 5* )	echo "Option 5 selected"
 	echo "This will delete all pre-existing cron jobs, press 'y' to confirm"
 	crontab -ir
+	echo "All jobs removed successfully."
 	printf "\n";;
 
 9* )	exit 0;;
