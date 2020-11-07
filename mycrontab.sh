@@ -40,7 +40,7 @@ case $Selection in
 			#the "^" makes sure that the input begins with a number
 			#the "+" allows for multiple numbers to be entered
 			#the "$" checks that there is nothing entered after the number
-			[[ $DofW =~ ^[0-9]+$ ]] || { echo "Please enter a number:"; continue; }
+			[[ $DofW =~ ^[0-9]+$ ]] || { echo "Please enter a number (0-7):"; continue; }
 		fi
 
 		#this line checks if the entered number is between 0 and 7 (inclusive) and prints an error message if not.
@@ -66,7 +66,7 @@ case $Selection in
 			#the "^" makes sure that the input begins with a number
 			#the "+" allows for multiple numbers to be entered
 			#the "$" checks that there is nothing entered after the number
-			[[ $Month =~ ^[0-9]+$ ]] || { echo "Please enter a number:"; continue; }
+			[[ $Month =~ ^[0-9]+$ ]] || { echo "Please enter a number (1-12):"; continue; }
 		fi
 
 		#this line checks if the entered number is between 1 and 12 (inclusive) and prints an error message if not.
@@ -92,7 +92,7 @@ case $Selection in
 			#the "^" makes sure that the input begins with a number
 			#the "+" allows for multiple numbers to be entered
 			#the "$" checks that there is nothing entered after the number
-			[[ $DofM =~ ^[0-9]+$ ]] || { echo "Please enter a number:"; continue; }
+			[[ $DofM =~ ^[0-9]+$ ]] || { echo "Please enter a number (1-31):"; continue; }
 		fi
 
 		#this line checks if the entered number is between 1 and 31 (inclusive) and prints an error message if not.
@@ -118,7 +118,7 @@ case $Selection in
 			#the "^" makes sure that the input begins with a number
 			#the "+" allows for multiple numbers to be entered
 			#the "$" checks that there is nothing entered after the number
-			[[ $Hour =~ ^[0-9]+$ ]] || { echo "Please enter a number:"; continue; }
+			[[ $Hour =~ ^[0-9]+$ ]] || { echo "Please enter a number (0-23):"; continue; }
 		fi
 
 		#this line checks if the entered number is between 0 and 23 (inclusive) and prints an error message if not.
@@ -144,7 +144,7 @@ case $Selection in
 			#the "^" makes sure that the input begins with a number
 			#the "+" allows for multiple numbers to be entered
 			#the "$" checks that there is nothing entered after the number
-			[[ $Minute =~ ^[0-9]+$ ]] || { echo "Please enter a number:"; continue; }
+			[[ $Minute =~ ^[0-9]+$ ]] || { echo "Please enter a number (0-59):"; continue; }
 		fi
 
 		#this line checks if the entered number is between 0 and 59 (inclusive) and prints an error message if not.
@@ -192,7 +192,7 @@ case $Selection in
 			#the "^" makes sure that the input begins with a number
 			#the "+" allows for multiple numbers to be entered
 			#the "$" checks that there is nothing entered after the number
-			[[ $DofW =~ ^[0-9]+$ ]] || { echo "Please enter a number:"; continue; }
+			[[ $DofW =~ ^[0-9]+$ ]] || { echo "Please enter a number (0-7):"; continue; }
 		fi
 
 		#this line checks if the entered number is between 0 and 7 (inclusive) and prints an error message if not.
@@ -218,7 +218,7 @@ case $Selection in
 			#the "^" makes sure that the input begins with a number
 			#the "+" allows for multiple numbers to be entered
 			#the "$" checks that there is nothing entered after the number
-			[[ $Month =~ ^[0-9]+$ ]] || { echo "Please enter a number:"; continue; }
+			[[ $Month =~ ^[0-9]+$ ]] || { echo "Please enter a number (1-12):"; continue; }
 		fi
 
 		#this line checks if the entered number is between 1 and 12 (inclusive) and prints an error message if not.
@@ -244,7 +244,7 @@ case $Selection in
 			#the "^" makes sure that the input begins with a number
 			#the "+" allows for multiple numbers to be entered
 			#the "$" checks that there is nothing entered after the number
-			[[ $DofM =~ ^[0-9]+$ ]] || { echo "Please enter a number:"; continue; }
+			[[ $DofM =~ ^[0-9]+$ ]] || { echo "Please enter a number (1-31):"; continue; }
 		fi
 
 		#this line checks if the entered number is between 1 and 31 (inclusive) and prints an error message if not.
@@ -270,7 +270,7 @@ case $Selection in
 			#the "^" makes sure that the input begins with a number
 			#the "+" allows for multiple numbers to be entered
 			#the "$" checks that there is nothing entered after the number
-			[[ $Hour =~ ^[0-9]+$ ]] || { echo "Please enter a number:"; continue; }
+			[[ $Hour =~ ^[0-9]+$ ]] || { echo "Please enter a number (0-23):"; continue; }
 		fi
 
 		#this line checks if the entered number is between 0 and 23 (inclusive) and prints an error message if not.
@@ -296,7 +296,7 @@ case $Selection in
 			#the "^" makes sure that the input begins with a number
 			#the "+" allows for multiple numbers to be entered
 			#the "$" checks that there is nothing entered after the number
-			[[ $Minute =~ ^[0-9]+$ ]] || { echo "Please enter a number:"; continue; }
+			[[ $Minute =~ ^[0-9]+$ ]] || { echo "Please enter a number (0-59):"; continue; }
 		fi
 
 		#this line checks if the entered number is between 0 and 59 (inclusive) and prints an error message if not.
