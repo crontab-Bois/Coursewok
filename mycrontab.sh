@@ -58,7 +58,7 @@ case $Selection in
 		printf "\n"
 
 		#this line checks if an asterisk is entered.
-		if echo x"$DofW" | grep '*' > /dev/null; then
+		if echo x"$Month" | grep '*' > /dev/null; then
 			break
 		else
 
@@ -84,7 +84,7 @@ case $Selection in
 		printf "\n"
 
 		#this line checks if an asterisk is entered.
-		if echo x"$DofW" | grep '*' > /dev/null; then
+		if echo x"$DofM" | grep '*' > /dev/null; then
 			break
 		else
 
@@ -110,7 +110,7 @@ case $Selection in
 		printf "\n"
 
 		#this line checks if an asterisk is entered.
-		if echo x"$DofW" | grep '*' > /dev/null; then
+		if echo x"$Hour" | grep '*' > /dev/null; then
 			break
 		else
 
@@ -136,7 +136,7 @@ case $Selection in
 		printf "\n"
 
 		#this line checks if an asterisk is entered.
-		if echo x"$DofW" | grep '*' > /dev/null; then
+		if echo x"$Minute" | grep '*' > /dev/null; then
 			break
 		else
 
@@ -210,7 +210,7 @@ case $Selection in
 		printf "\n"
 
 		#this line checks if an asterisk is entered.
-		if echo x"$DofW" | grep '*' > /dev/null; then
+		if echo x"$Month" | grep '*' > /dev/null; then
 			break
 		else
 
@@ -236,7 +236,7 @@ case $Selection in
 		printf "\n"
 
 		#this line checks if an asterisk is entered.
-		if echo x"$DofW" | grep '*' > /dev/null; then
+		if echo x"$DofM" | grep '*' > /dev/null; then
 			break
 		else
 
@@ -262,7 +262,7 @@ case $Selection in
 		printf "\n"
 
 		#this line checks if an asterisk is entered.
-		if echo x"$DofW" | grep '*' > /dev/null; then
+		if echo x"$Hour" | grep '*' > /dev/null; then
 			break
 		else
 
@@ -288,7 +288,7 @@ case $Selection in
 		printf "\n"
 
 		#this line checks if an asterisk is entered.
-		if echo x"$DofW" | grep '*' > /dev/null; then
+		if echo x"$Minute" | grep '*' > /dev/null; then
 			break
 		else
 
