@@ -1,55 +1,15 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+<Window x:Class="Coursework1.IndividualWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Coursework1"
+        mc:Ignorable="d"
+        Title="IndividualWindow" Height="450" Width="800">
+    <Grid>
+        <TextBox x:Name="txtPhoneNumber" HorizontalAlignment="Left" Height="30" Margin="410,158,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="194"/>
+        <Label Content="Phone Number:" HorizontalAlignment="Left" Margin="192,152,0,0" VerticalAlignment="Top" Height="36" Width="155" FontSize="20"/>
+        <Button x:Name="btnPhoneNumberEnter" Content="Enter" HorizontalAlignment="Left" Margin="317,235,0,0" VerticalAlignment="Top" Width="145" Height="40" FontSize="20" Click="btnPhoneNumberEnter_Click"/>
 
-namespace Coursework1
-{
-    /// <summary>
-    /// Interaction logic for LocationWindow.xaml
-    /// </summary>
-    public partial class LocationWindow : Window
-    {
-        public LocationWindow()
-        {
-            InitializeComponent();
-        }
-
-        List<Location> Locations = Data.getLocations();
-        private void btnLocationEnter_Click(object sender, RoutedEventArgs e)
-        {
-            Location newLocation = new Location();
-
-            try //Validates the location entered
-            {
-                if (txtLocation.Text.Length == 0)
-                {
-                    throw new System.ArgumentException("Enter a location first!");
-                }
-
-                if (Locations.Count == 0) //If there are no locations stored already then add one with the location entered
-                {
-                    Locations.Add(new Location(txtLocation.Text));
-                    txtLocation.Clear();
-                    throw new System.ArgumentException("Location entered!");
-                }
-            }
-            catch (ArgumentException ex)
-            {
-                MessageBox.Show(ex.Message);
-                return;
-            }
-
-            newLocation.addLocation(txtLocation.Text, ref Locations); //sends the input to be checked whether that location is already in the list
-        }
-    }
-}
+    </Grid>
+</Window>
